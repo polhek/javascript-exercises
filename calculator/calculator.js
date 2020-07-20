@@ -1,26 +1,37 @@
-function add () {
-	
+function add (a, b) {
+	return a + b;
 }
 
-function subtract () {
-	
+function subtract (a, b) {
+	return a - b;
 }
 
-function sum () {
-	
+function sum (array) {
+	return array.reduce(function(total, currentValue) {
+		return total + currentValue;
+	}, 0) 
+}
+function multiply (array) {
+	return array.reduce(function(total, currentValue) {
+		return total * currentValue;
+	}, 1)
 }
 
-function multiply () {
-	
+function power(a, b) {
+	return Math.pow(a, b);
 }
 
-function power() {
-	
+function factorial(num) {
+  if (num === 0 || num === 1) return 1;
+  for (var i = num - 1; i >= 1; i--) {
+    num *= i;
+  }
+  return num;
 }
 
-function factorial() {
-	
-}
+
+  
+
 
 module.exports = {
 	add,
@@ -30,3 +41,8 @@ module.exports = {
     power,
 	factorial
 }
+
+// add, subtract, get the sum, multiply, get the power, and find the factorial
+
+// In order to do this please fill out each function with your solution. Make sure to return the value so you can test it in Jasmine! To see the expected value
+// take a look at the spec file that houses the Jasmine test cases.
